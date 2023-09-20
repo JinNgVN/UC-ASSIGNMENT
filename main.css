@@ -9,13 +9,13 @@ body {
     box-sizing: border-box;
     font-family: 'Abril Fatface', cursive;
     font-family: 'Montserrat', sans-serif;
-    height: 2000px;
+    height: auto;
 }
 
 .hero {
     background-color: black;
     width: 100vw;
-    height: 1024px;
+    height: 750px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,8 +34,8 @@ body {
 
 .hero_logo {
     position: absolute;
-    top: 300px;
-    left: 520px;
+    top: 30%;
+    left: 35%;
     height: 407px;
     width: 407px;
     background-image: url("asset/D_S_Logo_1.png");
@@ -49,8 +49,8 @@ body {
 .hero_text_dip, .hero_text_sip {
     position: absolute;
     height: 280px;
-    top: 320px;
-    left: 200px;
+    top: 30%;
+    left: 12%;
     font-size: 250px;
     color: white;
     font-family: 'Abril Fatface', cursive;
@@ -58,7 +58,7 @@ body {
 }
 
 .hero_text_sip{
-    left: 850px;
+    left: 59%;
 }
 
 .nav {
@@ -72,7 +72,8 @@ body {
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    top: 0px
+    top: 0px;
+    z-index: 100;
 }
 
 .container {
@@ -104,41 +105,289 @@ body {
 }
 
 
-
-
 .text_image {
-    margin-top: 30px;
-    background-color: yellow;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
-@keyframes scrollText {
+
+/* left to right */
+@keyframes scrollText-1 {
     0% {
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
     100% {
-        transform: translateX(calc(-100% + 100vw));
+        transform: translateX(100vw);
     }
 }
+
+/* right to left */
+@keyframes scrollText-2 {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 
 .scrolling-text-container {
     overflow: hidden;
     width: 100vw;
     position: relative;
-    height: 200px;
+    margin-bottom: 50px;  
 }
 
-.rotated-container {
-    transform: rotate(-2deg); /* Tilt 25 degrees to the top right */
+.rotated-container-1 {
+    transform: rotate(-2deg);
 }
 
-.scrolling-text {
+.rotated-container-3 {
+    transform:  rotate(-1.48deg);
+}
+
+.scrolling-text, .scrolling-text-middle {
     display: inline-block;
-    white-space: nowrap;
-    animation: scrollText 10s linear infinite;
-    color: #D86A1A; /* Set the text color */
+    white-space: pre;
+    overflow: hidden;
+    animation: scrollText-1 20s linear infinite;
+    color: #D86A1A;
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 80px;
     font-weight: 900;
-    letter-spacing: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
 }
+
+.scrolling-text-middle {
+    animation: scrollText-2 20s linear infinite;
+}
+
+
+.about {
+    padding: 0px 5%;
+}
+
+.about-container {
+    background-color: #69A956;
+    display: flex;
+    flex-direction: column;
+    border-radius: 97px;
+    position: relative;
+    color: white;
+}
+
+.about-image {
+    background-image: url("asset/tea-picker-woman-s-asian-hands-close-up-pretty-tea-picking-girl-plantation.jpg");
+    width: 100%;
+    height: 771px;
+    background-size: cover;
+    filter: blur(2px);
+    border-radius: 97px;
+
+}
+
+.about-title {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    font-size: 128px;
+    width: 610px;
+    height: 453px;
+    margin: 0;
+}
+
+.about-listing {
+    position: absolute;
+    top: 10%;
+    right: -4px;
+    list-style: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.about-listing li {
+    background-color: white;
+    font-weight: bolder;
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+    border-bottom-left-radius: 84px ;
+    border-top-left-radius: 84px ;
+    padding: 20px 20px 20px 70px;
+}
+
+.about-listing li:nth-child(1) {
+    width: 80%; 
+}
+
+.about-listing li:nth-child(2) {
+    width: 105%; 
+    margin-left: -25%; 
+}
+
+.about-listing li:nth-child(3) {
+    width: 125%; 
+    margin-left: -50%; 
+}
+
+
+.about-text {
+    display: flex;
+    padding: 100px;
+}
+
+.about-text p {
+    width: 60%;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.about-image-logo {
+    width: 312px;
+    background-image: url("asset/D_S_Logo_1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: opacity(70%);
+    margin-left: 50px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.button button {
+    background-color: transparent;
+    border-radius: 42.5px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid white;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+
+.best_selling {
+    margin-top: 200px;
+    padding: 5%;
+    display: flex;
+
+}
+
+.best_selling-text {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.best_selling-text h1 {
+    font-size: 83px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.best_selling-text button {
+    background-color: transparent;
+    border-radius: 42.5px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid black;
+    color: black;
+    padding: 20px 30px;
+    cursor: pointer;
+    width: 40%;
+    transition: 0.3s;
+}
+
+.best_selling-text button:hover {
+    background-color: black;
+    color: white; 
+}
+
+.best_selling-images {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10%;
+    height: 1000px;
+}
+.best_selling-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 33%;
+}
+.image1 {
+    background-position: left;
+    background-image: url("asset/dns_stack1.png");
+}
+.image2 {
+    background-image: url("asset/dns_stack2.png");
+    background-position: right;
+
+}
+.image3 {
+    background-image: url("asset/dns_stack3.png");
+    background-position: left;
+}
+
+.best_selling-image-btn {
+    background-color: transparent;
+    border-radius: 73px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    padding: 30px 30px; /* Adjust as needed to get the desired size */
+    border-radius: 50%; /* Makes the button round */
+    outline: none;
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden; /* Ensures the button doesn't interfere with interactions */
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, color 0.3s;
+
+}
+.best_selling-image:hover > .best_selling-image-btn{
+    opacity: 1; /* Fully visible on hover */
+    visibility: visible; /* Make it visible on hover */ 
+    
+}
+
+.best_selling-image-btn:hover {
+    background-color: black; /* Black background on hover */
+    color: white; /* White text on hover */
+}
+
+.button1 {
+    top: 55%;
+    left: 35%;
+}
+.button2 {
+    top: 55%;
+    right: -4%;
+}
+.button3 {
+    top: 40%;
+    left: 40%;
+}
+
+
+
 
