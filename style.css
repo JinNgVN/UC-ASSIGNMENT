@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+}
+
+
+button {
+    background-color: transparent;
+    border-radius: 42.5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid black;
+    color: black;
+    padding: 20px 20px;
+    cursor: pointer;
+    width: 40%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white; 
+}
+
+#button_reverse{
+    border: 2px solid white;
+    color: white;
+}
+
+#button_reverse:hover{
+    background-color: white;
+    color: black; 
+}
+
+
+/* HEADER */
+header {
+    background-color: black;  
+    color: white;
+	width: 100vw;
+    position: sticky;
+    top: 0px;
+    z-index: 100;    
+    font-family: 'Avenir', sans-serif;
+    font-weight: 600;
+}
+
+
+header .inner {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+	width: 95%;
+    height: 4em;
+    margin: auto;
+    align-content: center;
+}
+
+/* logo */
+#logo a {
+	display: flex;
+	justify-content: center;
+}
+
+/* navigation */
+header nav ul{
+	align-items:flex-start;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 2em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+	font-size: 18px;
+}
+
+header nav ul li a:hover {
+	border-bottom: 2px solid white;
+	padding-bottom: 3px;
+}
+
+/* cart */
+#cart{
+	display: flex;
+	justify-content:flex-end;
+    padding-right: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+/* show the page that currently on */
+/* #current_page{
+	border-bottom: 2px solid #000;
+	padding-bottom: 3px;
+} */
+
+/* FOOTER */
+footer{
+	background-color: black;
+	width: 100vw;
+    color: white;
+}
+
+.container{
+	padding: 3em;
+}
+
+/* footer p{
+	display:inline-flex;
+	float: left;
+	align-items: flex-end;
+	align-content: flex-end;
+	margin: -1em 3em;
+} */
+
+/* keep-in-touch section styling*/
+.kit{
+	display: flex;
+	align-items: flex-end;
+    flex-direction: column;
+}
+
+.kit h3{
+	font-size: 96px;
+    font-family: 'Abril Fatface', cursive;
+	margin-bottom: .5em;
+    margin-top: 0;
+    font-weight: 100;
+}
+
+.kit input{
+	padding: 1em;
+	border-radius: 25px;
+	margin-right: 1em;
+	border-style: solid;
+	border-color: #25242C;
+}
+
+#email{
+	width: 25em;
+}
+
+#submit{
+	width: 8em;
+}
+
+
+/* social media icons styling */
+.fa-facebook, .fa-instagram, .fa-envelope{
+	font-size: 1.3em;
+    color: black;
+    padding: 0.3em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* navigation section styling*/
+.menu, .links{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.8em;
+    text-transform: uppercase;
+	list-style-type: none;
+	text-decoration:none;
+    padding: 1em 0;
+}
+
+
+.menu nav ul li, .links nav ul li {
+    display: inline;
+    margin-left: 1.5em;
+    color: white;
+}
+
+.menu nav ul li a{
+    color: white;
+    text-decoration:none;
+    font-weight: 800;
+}
+
+.line{
+    border-top: 1px solid;
+	position: relative;
+	/* width: 95vw; */
+	padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.line_m{
+    border-top: 1px solid;
+	position: relative;
+	width: 65vw;
+	padding: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_logo img{
+    position: absolute;
+    height: 30em;
+    width: 30em;
+    opacity: 0.6;
+    padding: 3em;
+}
+
+/* HOME PAGE */
+
+/* HERO */
+.hero{
+    background-color: black;
+    /* width: 80vw; */
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.hero_image {
+    background-image: url("asset/picked-organic-raspberries-macro.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    border-radius: 268.5px;
+    position: absolute;
+    z-index: 0;
+}
+
+.logo{
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.hero_logo {
+    z-index: 2;
+    width: 100%;
+    height: 200%;
+    background-image: url("asset/D_S_Logo_1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: opacity(50%);
+}
+
+
+.hero_text_dip {
+    font-size: 250px;
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+    position: relative;
+}
+
+.hero_text_sip {
+    font-size: 250px;
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    position: relative;
+}
+
+/* CTA */
+.shop{
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 10vw;
+    align-items: center;
+	width: 90vw;
+    align-content: center;
+}
+
+.shop-image{
+	height: 90vh;
+	/* width: 10vw; */
+	background-size: contain;
+    display: flex;
+}
+
+.shop-text{
+    display: flex;
+    width: 35vw;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.shop-text h1 {
+    font-size: 80px;
+    font-weight: 800;
+    font-family: 'Avenir', sans-serif;
+    align-items: flex-end;
+    display: flex;
+}
+
+/* TEXTS */
+.scroll_container div{
+    display: grid;
+	width: 100vw;
+    grid-template-columns: repeat(2, 1fr);  
+    column-gap: 2em;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+    text-decoration: none;
+}
+
+.scroll_container div a{
+    text-decoration: none;
+}
+
+.scroll_container div p{
+	font-size: 59px;
+	justify-content: center;
+	object-fit: cover;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Avenir', sans-serif;
+    color: black;
+}
+
+#red:hover{
+    color: #C91E4C;
+}
+#orange:hover{
+    color: #D86A1A;
+}
+#yellow:hover{
+    color: #FEBE4B;
+}
+#green:hover{
+    color: #69A956;
+}
+#blue:hover{
+    color: #30499F;
+}
+#purple:hover{
+    color: #645EA9;
+}
+
+/* infinite auto-scrolling animation */
+.scroll_container {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+    height: 15vh;
+    width: 100vw;
+}
+
+.line_1 {
+    transform: rotate(-1.8deg);
+}
+
+.line_3{
+    transform:  rotate(-1.2deg);
+}
+
+.scroll-parent {
+	position: relative;
+	height: 50vh;
+	overflow-x: hidden;
+}
+  
+.scroll-element {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+/* from left to right */
+.primary {
+	animation: primary 5s linear infinite;
+}
+
+.secondary {
+	animation: secondary 5s linear infinite;
+}
+
+@keyframes primary {
+	from {
+		left: 0%;
+	}
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes secondary {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+/* from right to left */
+.primary_right {
+	animation: primary_right 7s linear infinite;
+}
+
+.secondary_right {
+	animation: secondary_right 7s linear infinite;
+}
+
+@keyframes primary_right {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes secondary_right {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+
+
+/* ABOUT */
+.about{
+    padding: 0 7.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 85vh;
+    margin-top: 10em;
+}
+
+.about-image{
+    background-image: url("asset/tea-picker-woman-s-asian-hands-close-up-pretty-tea-picking-girl-plantation.jpg");
+    width: 80%;
+    height: 85vh;
+    background-size: cover;
+    filter: blur(2px);
+    border-radius: 90px;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+.about-text{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin: 10%;
+} 
+
+.about-text h1{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 96px;
+    margin: 0;
+}
+
+.about-text p{
+    font-size: 30px;
+}
+
+.about-text button{
+    height: 5em;
+}
+
+.about-listing{
+    justify-content: center;
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.about-listing li {
+    background-color: #69A956;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Avenir', sans-serif;
+    margin-bottom: 50px;
+    border-radius: 84px ;
+    padding: 20px 20px 20px 70px;
+    width: 60%;
+    align-content: center;
+}
+
+/* BEST-SELLINGS */
+.best_selling {
+    margin-top: 200px;
+    padding: 0 7.5%;
+    display: flex;
+}
+
+.best_selling-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: sticky;
+
+}
+
+.best_selling-text h1 {
+    font-size: 5em;
+    font-weight: 800;
+    font-family: 'Avenir', sans-serif;
+    margin-bottom: 1em;
+}
+
+.best_selling-images {
+    display: flex;
+	flex-wrap: wrap;
+    width: 45vw;
+	/* overflow-x: hidden;
+	overflow-y: auto; */
+	justify-content: flex-end;
+}
+
+.best_selling-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+.image1 {
+    background-position: left;
+    background-image: url("asset/dns_stack1.png");
+}
+
+.image2 {
+    background-image: url("asset/dns_stack2.png");
+    background-position: right;
+
+}
+.image3 {
+    background-image: url("asset/dns_stack3.png");
+    background-position: left;
+}
+
+.best_selling-image-btn {
+    background-color: transparent;
+    border-radius: 73px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    padding: 30px 30px; /* Adjust as needed to get the desired size */
+    border-radius: 50%; /* Makes the button round */
+    outline: none;
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden; /* Ensures the button doesn't interfere with interactions */
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, color 0.3s;
+
+}
+.best_selling-image:hover > .best_selling-image-btn{
+    opacity: 1; /* Fully visible on hover */
+    visibility: visible; /* Make it visible on hover */ 
+    
+}
+
+.best_selling-image-btn:hover {
+    background-color: black; /* Black background on hover */
+    color: white; /* White text on hover */
+}
+
+.button1 {
+    top: 55%;
+    left: 35%;
+}
+.button2 {
+    top: 55%;
+    right: -4%;
+}
+.button3 {
+    top: 40%;
+    left: 40%;
+}
+
+
+/* REVIEWS */
+.review{
+	margin: 10em auto;
+    background-color: #645EA9;
+
+}
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.slider{
+	height: 100%;
+	display: flex;
+	width: 400%;
+	transition: all 0.3s;
+}
+
+.slider section{
+	/* flex-basis: 100%; */
+	padding: 5em;
+    width: 100%;
+    flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider section div{
+	/* margin: 1em; */
+	/* width: 100%; */
+	text-align: center;
+	align-items: flex-start;
+}
+
+.slider section p{
+    font-size: 40px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* buttons styling */
+.controls .arrow {
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	font-size: 2em;
+	transform: translateY(-50%);
+    color: #fff;
+}
+
+.arrow.left {
+	left: 10%;
+}
+
+.arrow.right{
+	right: 10%;
+}
+
+.controls ul{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.controls ul li{
+	width: 10px;
+	height: 10px;
+	border: 2px solid white;
+	border-radius: 50px;
+	margin: 10px;
+	background:transparent;
+	cursor: pointer;
+}
+
+.controls ul li.selected{
+	background: white;
+}
+
+.fa-star{
+    font-size: 30px;
+    color: #fff;
+    margin: 5px;
+}
