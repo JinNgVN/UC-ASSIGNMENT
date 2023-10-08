@@ -21,13 +21,13 @@ document.querySelectorAll(".controls li").forEach(function(indicator, ind) {
 // if left arrow is clicked and there is space to more, translate the section to the left by 25%
 leftArrow.addEventListener("click", function() {
     sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
-    indicatorParents.children[sectionIndex].classList.add("selected");
     setIndex();
+    indicatorParents.children[sectionIndex].classList.add("selected");
 });
 
 // if right arrow is clicked and there is space to more, translate the section to the right by 25%
 rightArrow.addEventListener("click", function() {
     sectionIndex = (sectionIndex < 3) ? sectionIndex + 1 : 3;
-    indicatorParents.children[sectionIndex].classList.add("selected");
     setIndex();
+    indicatorParents.children[sectionIndex].classList.add("selected");
 });
