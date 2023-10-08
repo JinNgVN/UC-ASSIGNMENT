@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+    background-color: #FAF9ED;
+}
+
+/* HEADER */
+header {
+    background-color: black;  
+    color: white;
+	width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100;    
+    font-weight: 600;
+    transition: all 300ms ease-in-out;
+}
+
+
+header .inner {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+	width: 95%;
+    height: 4em;
+    margin: auto;
+    align-content: center;
+}
+
+/* logo */
+#logo a {
+	display: flex;
+	justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* navigation */
+header nav ul{
+	align-items:flex-start;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 2em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+	font-size: 18px;
+}
+
+header nav ul li a:hover {
+	border-bottom: 2px solid white;
+	padding-bottom: 3px;
+}
+
+/* cart */
+#cart{
+	display: flex;
+	justify-content:flex-end;
+    padding-right: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* about */
+.about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+    margin-top: 7rem;
+}
+
+.about h1 {
+    font-size: 80px;
+    font-weight: 900;
+    color: #30499F8F;
+}
+
+#main {
+    color: #30499F;
+}
+
+/* logo */
+.about_logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 10rem;
+}
+
+.logo {
+    border: 7px solid black;
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.actual_logo {
+    background-image: url("asset/Vector.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 70%;
+    animation: spin 5s linear infinite;
+}
+
+
+/* about info */
+
+.about_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    gap: 7rem;
+    overflow: hidden;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.about_info p {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.about_info div{
+    position: absolute;
+    background-color: rgb(80, 80, 213);
+    width: 15rem;
+    height: 15rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.about_info div.visible {
+    opacity: 1;
+}
+
+.slide_image_1 {
+    top: 2%;
+    right: -8%;
+    transform: rotate(8deg);
+}
+.slide_image_2 {
+    top: 20%;
+    left: -3%;
+    transform: rotate(11deg);
+}
+.slide_image_3 {
+    top: 50%;
+    left: -1%;
+    transform: rotate(8deg);
+}
+.slide_image_4 {
+    top: 45%;
+    right: -1%;
+    transform: rotate(-5deg);
+}
+.slide_image_5 {
+    top: 80%;
+    left: -2%;
+    transform: rotate(-8deg);
+}
+.slide_image_6 {
+    top: 80%;
+    right: -2%;
+    transform: rotate(4deg);
+}
+
+/* faq */
+
+.faq {
+    width: 100%;
+    height: 1000px;
+    padding-top: 7rem;
+    padding-bottom: 10rem;
+    border-radius: 700px 700px 0px 0px;
+    background-color: #645EA9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.faq h1 {
+    color: #FFFFFF;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.accordion {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+}
+.accordion-item {
+    text-align: left;
+    width: 90%;
+    background-color: white;
+    font-size: 50px;
+    border-radius: 30px;
+    
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.my_line {
+    width: 90%;
+    border-bottom: 3px solid black;
+}
+
+.accordion-content p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.accordion-header {
+    cursor: pointer;
+    width: 100%;
+    font-weight: 400;
+    padding: 1rem 4rem;
+}
+
+.accordion-item.active .accordion-content {
+    height: auto;
+    max-height: 500px;
+}
+
+
+
+
+/* footer */
+footer{
+	background-color: black;
+	width: 100vw;
+    color: white;
+}
+
+.container{
+	padding: 3em;
+}
+
+.kit{
+	display: flex;
+	align-items: flex-end;
+    flex-direction: column;
+}
+
+.kit h3{
+	font-size: 96px;
+    font-family: 'Abril Fatface', cursive;
+	margin-bottom: .5em;
+    margin-top: 0;
+    font-weight: 100;
+}
+
+.kit input{
+	padding: 1em;
+	border-radius: 25px;
+	margin-right: 1em;
+	border-style: solid;
+	border-color: #25242C;
+}
+
+#email{
+	width: 25em;
+}
+
+#submit{
+	width: 8em;
+}
+
+
+/* social media icons styling */
+.fa-facebook, .fa-instagram, .fa-envelope{
+	font-size: 1.3em;
+    color: black;
+    padding: 0.3em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+/* navigation section styling*/
+.menu, .links{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.8em;
+    text-transform: uppercase;
+	list-style-type: none;
+	text-decoration:none;
+    padding: 1em 0;
+}
+
+
+.menu nav ul li, .links nav ul li {
+    display: inline;
+    margin-left: 1.5em;
+    color: white;
+}
+
+.menu nav ul li a{
+    color: white;
+    text-decoration:none;
+    font-weight: 800;
+}
+
+.line{
+    border-top: 1px solid;
+	position: relative;
+	/* width: 95vw; */
+	padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.line_m{
+    border-top: 1px solid;
+	position: relative;
+	width: 65vw;
+	padding: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_logo img{
+    position: absolute;
+    height: 30em;
+    width: 30em;
+    opacity: 0.6;
+    padding: 3em;
+}
+
+
+.scroll_up header{
+    filter: drop-shadow(0 -10px 20px rgba(170,170,170));
+
+}
+
+.scroll_down header{
+    transform: translate3d(0, -100%, 0);
+
+}
