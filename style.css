@@ -304,7 +304,9 @@ footer{
 	/* width: 10vw; */
 	background-size: contain;
     display: flex;
+    position: relative;
 }
+
 
 .shop-text{
     display: flex;

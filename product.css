@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+}
+
+/* HEADER */
+header {
+    background-color: black;  
+    color: white;
+	width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100;    
+    font-family: 'Avenir', sans-serif;
+    font-weight: 600;
+    transition: all 300ms ease-in-out;
+}
+
+
+header .inner {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+	width: 95%;
+    height: 4em;
+    margin: auto;
+    align-content: center;
+}
+
+/* logo */
+#logo a {
+	display: flex;
+	justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* navigation */
+header nav ul{
+	align-items:flex-start;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 2em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+	font-size: 18px;
+}
+
+header nav ul li a:hover {
+	border-bottom: 2px solid white;
+	padding-bottom: 3px;
+}
+
+/* cart */
+#cart{
+	display: flex;
+	justify-content:flex-end;
+    padding-right: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* image */
+.image {
+    background-size: cover;
+    width: 100%;
+    height: 793px;
+    background-image: url("./asset/Flat\ lay\ cup\ with\ lemon\ tea.png");
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0px;
+    background-position: center center;
+
+}
+
+.image h1 {
+    color: #69A956;
+    font-size: 128px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+}
+
+/* navigation */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    width: 8640px;
+    height: 870px;
+    overflow: hidden;
+}
+.product {
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.product_image_container{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_image {
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    border-radius: 146px;
+}
+
+
+
+.product_detail{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_title {
+    font-size: 120px;
+    font-weight: 400;
+    font-family: 'Abril Fatface', cursive;
+    line-height: 161.88px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.product_info {
+    width: 75%;
+    font-size: 24px;
+    font-weight: 400;
+    align-self: flex-end;
+    line-height: 32.78px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.line {
+    width: 70%;
+}
+
+.product_btn {
+    margin-top: 2rem;
+    background-color: transparent;
+    border-radius: 42.5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 3px solid black;
+    color: black;
+    padding: 20px 20px;
+    cursor: pointer;
+    width: 30%;
+    transition: 0.3s;
+}
+
+.product_btn:hover {
+    background-color: black;
+    color: white; 
+}
+
+.product_logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    bottom: 10%;
+    left: 25%;
+}
+
+
+
+.product_image_1 {
+    background-image: url("asset/picked-organic-raspberries-macro.jpg");
+}
+
+.product_image_2 {
+    background-image: url("asset/close-up-bunch-raw-lemons.jpg");
+
+}
+.product_image_3 {
+    background-image: url("asset/white-cosmos-flowers.jpg");
+
+}
+.product_image_4 {
+    background-image: url("asset/close-up-green-leaves-nature.jpg");
+
+}
+.product_image_5 {
+    background-image: url("asset/blacktea.jpg");
+
+}
+.product_image_6 {
+    background-image: url("asset/close-up-view-natural-seeds-concept.jpg");
+
+}
+
+.product_title_1 {
+    color: #BC284A;
+}
+.product_title_2 {
+    color: #F99D44;
+}
+.product_title_3 {
+    color: #FEBE4B;
+}
+.product_title_4 {
+    color: #69A956;
+}
+.product_title_5 {
+    color: #30499F;
+}
+.product_title_6 {
+    color: #645EA9;
+}
+
+.product_logo_1 {
+    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
+}
+.product_logo_2 {
+    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 4.png");
+}
+.product_logo_3 {
+    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
+}
+.product_logo_4 {
+    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
+}
+.product_logo_5 {
+    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
+}
+.product_logo_6 {
+    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+	background-color: black;
+	width: 100vw;
+    color: white;
+}
+
+.container{
+	padding: 3em;
+}
+
+.kit{
+	display: flex;
+	align-items: flex-end;
+    flex-direction: column;
+}
+
+.kit h3{
+	font-size: 96px;
+    font-family: 'Abril Fatface', cursive;
+	margin-bottom: .5em;
+    margin-top: 0;
+    font-weight: 100;
+}
+
+.kit input{
+	padding: 1em;
+	border-radius: 25px;
+	margin-right: 1em;
+	border-style: solid;
+	border-color: #25242C;
+}
+
+#email{
+	width: 25em;
+}
+
+#submit{
+	width: 8em;
+}
+
+
+/* social media icons styling */
+.fa-facebook, .fa-instagram, .fa-envelope{
+	font-size: 1.3em;
+    color: black;
+    padding: 0.3em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+/* navigation section styling*/
+.menu, .links{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.8em;
+    text-transform: uppercase;
+	list-style-type: none;
+	text-decoration:none;
+    padding: 1em 0;
+}
+
+
+.menu nav ul li, .links nav ul li {
+    display: inline;
+    margin-left: 1.5em;
+    color: white;
+}
+
+.menu nav ul li a{
+    color: white;
+    text-decoration:none;
+    font-weight: 800;
+}
+
+.line{
+    border-top: 1px solid;
+	position: relative;
+	/* width: 95vw; */
+	padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.line_m{
+    border-top: 1px solid;
+	position: relative;
+	width: 65vw;
+	padding: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_logo img{
+    position: absolute;
+    height: 30em;
+    width: 30em;
+    opacity: 0.6;
+    padding: 3em;
+}
+
+
+.scroll_up header{
+    filter: drop-shadow(0 -10px 20px rgba(170,170,170));
+
+}
+
+.scroll_down header{
+    transform: translate3d(0, -100%, 0);
+
+}
