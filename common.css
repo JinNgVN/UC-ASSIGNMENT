@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Avenir', sans-serif;
+}
+
+
+button {
+    background-color: transparent;
+    border-radius: 42.5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid black;
+    color: black;
+    padding: 20px 20px;
+    cursor: pointer;
+    width: 40%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white; 
+}
+
+#button_reverse{
+    border: 2px solid white;
+    color: white;
+}
+
+#button_reverse:hover{
+    background-color: white;
+    color: black; 
+}
+
+
+/* HEADER */
+.scroll_down header{
+    transform: translate3d(0, -100%, 0);
+
+}
+header {
+    background-color: black;  
+    color: white;
+	width: 100vw;
+    position: sticky;
+    top: 0px;
+    z-index: 100;    
+    font-family: 'Avenir', sans-serif;
+    font-weight: 600;
+    transition: all 300ms ease-in-out;
+}
+
+
+header .inner {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+	width: 95%;
+    height: 4em;
+    margin: auto;
+    align-content: center;
+}
+
+/* logo */
+#logo a {
+	display: flex;
+	justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* navigation */
+header nav ul{
+	align-items:flex-start;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 2em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+	font-size: 18px;
+}
+
+header nav ul li a:hover {
+	border-bottom: 2px solid white;
+	padding-bottom: 3px;
+}
+
+/* cart */
+#cart{
+	display: flex;
+	justify-content:flex-end;
+    padding-right: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* FOOTER */
+footer{
+	background-color: black;
+	width: 100vw;
+    color: white;
+}
+
+.container{
+	padding: 3em;
+    display: flex;
+    flex-direction: row;
+}
+
+.kit{
+	display: flex;
+	align-items: flex-end;
+    flex-direction: column;
+}
+
+.kit h3{
+	font-size: 96px;
+    font-family: 'Abril Fatface', cursive;
+	margin-bottom: .5em;
+    margin-top: 0;
+    font-weight: 100;
+}
+
+.kit input{
+	padding: 1em;
+	border-radius: 25px;
+	margin-right: 1em;
+	border-style: solid;
+	border-color: #25242C;
+}
+
+
+.footer_form {
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+}
+
+
+#email{
+	width: 80%;
+    height: 100%;
+}
+
+#submit{
+	width: 8em;
+}
+
+
+/* social media icons styling */
+.fa-facebook, .fa-instagram, .fa-envelope{
+	font-size: 1.3em;
+    color: black;
+    padding: 0.3em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* navigation section styling*/
+.menu, .links{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.8em;
+    text-transform: uppercase;
+	list-style-type: none;
+	text-decoration:none;
+    padding: 1em 0;
+    gap: 1rem;
+}
+
+
+.menu nav ul li, .links nav ul li {
+    display: inline;
+    margin-left: 1.5em;
+    color: white;
+}
+
+.menu nav ul li a{
+    color: white;
+    text-decoration:none;
+    font-weight: 800;
+}
+
+.line_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve_container {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+}
+
+.line{
+    border-top: 1px solid;
+	width: 95vw;
+	padding: 1rem;
+}
+
+.line_m{
+    border-top: 1px solid;
+	position: relative;
+	width: 90%;
+	padding: 0;
+    margin-right: 0;
+}
+
+.footer_logo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+.footer_logo img{
+    height: 22em;
+    width: 22em;
+    opacity: 0.6;
+}
+
+.kit_container {
+    height: 100%;
+}
+

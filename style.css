@@ -1,229 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Avenir', sans-serif;
-    font-size: 16px;
-}
-
-
-button {
-    background-color: transparent;
-    border-radius: 42.5px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 2px solid black;
-    color: black;
-    padding: 20px 20px;
-    cursor: pointer;
-    width: 40%;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: black;
-    color: white; 
-}
-
-#button_reverse{
-    border: 2px solid white;
-    color: white;
-}
-
-#button_reverse:hover{
-    background-color: white;
-    color: black; 
-}
-
-
-/* HEADER */
-header {
-    background-color: black;  
-    color: white;
-	width: 100vw;
-    position: sticky;
-    top: 0px;
-    z-index: 100;    
-    font-family: 'Avenir', sans-serif;
-    font-weight: 600;
-}
-
-
-header .inner {
-    display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    align-items: center;
-	width: 95%;
-    height: 4em;
-    margin: auto;
-    align-content: center;
-}
-
-/* logo */
-#logo a {
-	display: flex;
-	justify-content: center;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-/* navigation */
-header nav ul{
-	align-items:flex-start;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 2em;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-	font-size: 18px;
-}
-
-header nav ul li a:hover {
-	border-bottom: 2px solid white;
-	padding-bottom: 3px;
-}
-
-/* cart */
-#cart{
-	display: flex;
-	justify-content:flex-end;
-    padding-right: 40px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-
-
-/* show the page that currently on */
-/* #current_page{
-	border-bottom: 2px solid #000;
-	padding-bottom: 3px;
-} */
-
-/* FOOTER */
-footer{
-	background-color: black;
-	width: 100vw;
-    color: white;
-}
-
-.container{
-	padding: 3em;
-}
-
-/* footer p{
-	display:inline-flex;
-	float: left;
-	align-items: flex-end;
-	align-content: flex-end;
-	margin: -1em 3em;
-} */
-
-/* keep-in-touch section styling*/
-.kit{
-	display: flex;
-	align-items: flex-end;
-    flex-direction: column;
-}
-
-.kit h3{
-	font-size: 96px;
-    font-family: 'Abril Fatface', cursive;
-	margin-bottom: .5em;
-    margin-top: 0;
-    font-weight: 100;
-}
-
-.kit input{
-	padding: 1em;
-	border-radius: 25px;
-	margin-right: 1em;
-	border-style: solid;
-	border-color: #25242C;
-}
-
-#email{
-	width: 25em;
-}
-
-#submit{
-	width: 8em;
-}
-
-
-/* social media icons styling */
-.fa-facebook, .fa-instagram, .fa-envelope{
-	font-size: 1.3em;
-    color: black;
-    padding: 0.3em;
-    background-color: white;
-    border-radius: 50%;
-}
-
-/* navigation section styling*/
-.menu, .links{
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1.8em;
-    text-transform: uppercase;
-	list-style-type: none;
-	text-decoration:none;
-    padding: 1em 0;
-}
-
-
-.menu nav ul li, .links nav ul li {
-    display: inline;
-    margin-left: 1.5em;
-    color: white;
-}
-
-.menu nav ul li a{
-    color: white;
-    text-decoration:none;
-    font-weight: 800;
-}
-
-.line{
-    border-top: 1px solid;
-	position: relative;
-	/* width: 95vw; */
-	padding: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.line_m{
-    border-top: 1px solid;
-	position: relative;
-	width: 65vw;
-	padding: 0;
-    margin-right: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer_logo img{
-    position: absolute;
-    height: 30em;
-    width: 30em;
-    opacity: 0.6;
-    padding: 3em;
-}
-
 /* HOME PAGE */
 
 /* HERO */
@@ -313,6 +87,7 @@ footer{
     width: 35vw;
     flex-wrap: wrap;
     justify-content: flex-end;
+    text-align: right;
 
 }
 
@@ -351,8 +126,13 @@ footer{
     color: black;
 }
 
+#red, #orange, #yellow, #green, #blue, #purple {
+    white-space: nowrap;
+}
+
 #red:hover{
     color: #C91E4C;
+ 
 }
 #orange:hover{
     color: #D86A1A;
@@ -373,6 +153,7 @@ footer{
 /* infinite auto-scrolling animation */
 .scroll_container {
 	display: flex;
+    flex-wrap: nowrap;
 	align-items: center;
 	overflow: hidden;
     height: 15vh;
@@ -389,8 +170,8 @@ footer{
 
 .scroll-parent {
 	position: relative;
-	height: 50vh;
-	overflow-x: hidden;
+	height: 10rem;
+	overflow: auto;
 }
   
 .scroll-element {
@@ -439,6 +220,8 @@ footer{
 .secondary_right {
 	animation: secondary_right 7s linear infinite;
 }
+
+
 
 @keyframes primary_right {
 	from {
@@ -526,33 +309,38 @@ footer{
 }
 
 /* BEST-SELLINGS */
+
 .best_selling {
     margin-top: 200px;
     padding: 0 7.5%;
     display: flex;
 }
 
+.scroll_container_best_selling {
+    width: 50%;
+    
+}
 .best_selling-text {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;  
     position: sticky;
-
+    top: 5rem;
 }
+
 
 .best_selling-text h1 {
     font-size: 5em;
     font-weight: 800;
     font-family: 'Avenir', sans-serif;
     margin-bottom: 1em;
+ 
 }
 
 .best_selling-images {
     display: flex;
 	flex-wrap: wrap;
     width: 45vw;
-	/* overflow-x: hidden;
-	overflow-y: auto; */
 	justify-content: flex-end;
 }
 
@@ -586,38 +374,39 @@ footer{
     border: 2px solid black;
     color: black;
     cursor: pointer;
-    padding: 30px 0px; /* Adjust as needed to get the desired size */
-    border-radius: 50%; /* Makes the button round */
+    border-radius: 50%;
+    width: 8rem;
+    aspect-ratio: 1/1;
     outline: none;
     position: absolute;
     background-color: white;
     opacity: 0;
-    visibility: hidden; /* Ensures the button doesn't interfere with interactions */
+    visibility: hidden; 
     transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, color 0.3s;
 
 }
 .best_selling-image:hover > .best_selling-image-btn{
-    opacity: 1; /* Fully visible on hover */
-    visibility: visible; /* Make it visible on hover */ 
+    opacity: 1; 
+    visibility: visible; 
     
 }
 
 .best_selling-image-btn:hover {
-    background-color: black; /* Black background on hover */
-    color: white; /* White text on hover */
+    background-color: black; 
+    color: white; 
 }
 
 .button1 {
-    top: 55%;
-    left: 35%;
+    top: 60%;
+    left: 45%;
 }
 .button2 {
     top: 55%;
     right: -4%;
 }
 .button3 {
-    top: 40%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
 }
 
 
@@ -641,7 +430,6 @@ footer{
 }
 
 .slider section{
-	/* flex-basis: 100%; */
 	padding: 5em;
     width: 100%;
     flex-direction: column;
@@ -651,8 +439,6 @@ footer{
 }
 
 .slider section div{
-	/* margin: 1em; */
-	/* width: 100%; */
 	text-align: center;
 	align-items: flex-start;
 }
@@ -714,3 +500,5 @@ footer{
     color: #fff;
     margin: 5px;
 }
+
+

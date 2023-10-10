@@ -31,3 +31,7 @@ rightArrow.addEventListener("click", function() {
     setIndex();
     indicatorParents.children[sectionIndex].classList.add("selected");
 });
+
+
+
+

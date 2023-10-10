@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
@@ -194,41 +195,47 @@
             <div class="footer_logo">
                 <img src="asset/D_S_Logo_1.png">
             </div>
-            <div class="kit">
-            <div class="contact-form">
-                <h3>KEEP IN TOUCH</h3>
-                <form>
-                    <input type="email" id="email" placeholder="E-mail" required>
-                    <input type="submit" id="submit">
-                </form>
-            </div> 
-            <div class="links">
-                <nav>
-                    <ul>
-                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-                    </ul>
-                </nav>
-            </div>               
+            <div class="kit_container">
+                <div class="kit">
+                    <div class="contact-form">
+                        <h3>KEEP IN TOUCH</h3>
+                        <form class="footer_form">
+                            <input type="email" id="email" placeholder="E-mail" required>
+                            <input type="submit" id="submit">
+                        </form>
+                    </div> 
+                    <div class="links">
+                        <nav>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>               
+                    <div class="line_m"></div>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="product.html">Our Teas</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="">FAQS</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="line_m"></div>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="product.html">Our Teas</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="">FAQS</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="line"></div>
         </div>
-        
+        <div class="line_wrapper">
+            <div class="line"></div>
+            <div class="reserve_container">
+                <p>All rights reserved ...</p>
+            </div>
+        </div>
     </footer>
+    <script src="common.js"></script>
     <script src="product.js"></script> 
-    
 </body>
 </html>
