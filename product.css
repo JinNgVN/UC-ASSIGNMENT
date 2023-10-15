@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 /* image */
 .image {
     background-size: cover;
@@ -8,7 +11,6 @@
     position: relative;
     padding: 0px;
     background-position: center center;
-
 }
 
 .image h1 {
@@ -21,19 +23,38 @@
 }
 
 /* navigation */
+
 .navigation {
     display: flex;
     flex-direction: row;
-    width: 8640px;
-    height: 900px;
-    overflow: hidden;
+    width: 600vw;
+    height: 100vh;
     margin-bottom: 3rem;
+    padding: 2rem 0rem;
+    transition: transform 0.5s ease-out;
+
 }
+
+.navigation_bar{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 2vw;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_product{
+    width: 100%;
+    height: 16%;
+}
+
 .product {
     display: flex;
     flex-direction: row;
-    width: 16%;
-    padding: 2rem 1rem;
+    width: 100vw;
+    padding: 0rem 1rem;
     position: relative;
 }
 
@@ -46,12 +67,10 @@
 }
 .product_image {
     width: 80%;
-    height: 80%;
+    height: 90%;
     background-size: cover;
     border-radius: 146px;
 }
-
-
 
 .product_detail{
     width: 60%;
@@ -60,12 +79,12 @@
 }
 
 .product_title {
-    font-size: 120px;
+    font-size: 7rem;
     font-weight: 400;
     font-family: 'Abril Fatface', cursive;
-    line-height: 161.88px;
+    line-height: 8rem;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .product_info {
@@ -76,22 +95,11 @@
     line-height: 32.78px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-
-.product_btn {
-    margin-top: 2rem;
-    background-color: transparent;
-    border-radius: 42.5px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 3px solid black;
-    color: black;
-    padding: 20px 20px;
-    cursor: pointer;
-    width: 30%;
-    transition: 0.3s;
+.line {
+    width: 90%;
 }
 
 .product_btn:hover {
@@ -103,10 +111,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    width: 55%;
-    height: 55%;
-    bottom: 10%;
-    left: 25%;
+    height: 60%;
+    aspect-ratio: 1/1;
+    bottom: 8%;
+    left: 30%;
 }
 
 
@@ -153,6 +161,24 @@
 }
 .product_title_6 {
     color: #645EA9;
+}
+.nav1 {
+    background-color: #BC284A;
+}
+.nav2 {
+    background-color: #F99D44;
+}
+.nav3 {
+    background-color: #FEBE4B;
+}
+.nav4 {
+    background-color: #69A956;
+}
+.nav5 {
+    background-color: #30499F;
+}
+.nav6 {
+    background-color: #645EA9;
 }
 
 .product_logo_1 {

@@ -3,7 +3,7 @@
 /* HERO */
 .hero{
     background-color: black;
-    /* width: 80vw; */
+    width: 100vw;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -71,6 +71,7 @@
     align-items: center;
 	width: 90vw;
     align-content: center;
+    position: relative;
 }
 
 .shop-image{
@@ -79,8 +80,12 @@
 	background-size: contain;
     display: flex;
     position: relative;
+    /* background: radial-gradient(circle at center, rgba(255, 85, 85, 0.8), transparent); */
 }
 
+.shop-image img {
+    z-index: 10;
+}
 
 .shop-text{
     display: flex;
@@ -98,6 +103,16 @@
     align-items: flex-end;
     display: flex;
 }
+
+.red_blured_bk {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(255, 85, 85, 0.8), rgb(255, 255, 255) 70%);
+}
+
+
 
 /* TEXTS */
 .scroll_container div{
@@ -171,7 +186,6 @@
 .scroll-parent {
 	position: relative;
 	height: 10rem;
-	overflow: auto;
 }
   
 .scroll-element {
