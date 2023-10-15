@@ -1,38 +1,46 @@
-let isScrollingHorizontally = false;
-let lastScrollTopProduct = 0;
-let isScrollingDown = true;
-let accumulatedDelta = 0;
+const wideDiv = document.querySelector('.navigation');
+const stickyParent = document.querySelector(".parent_wide_div");
+const nextSection = document.querySelector('footer');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-    isScrollingHorizontally = entry.isIntersecting;
-  });
-}, {
-    threshold: 0.1,  // Adjust this value
+// Artificially increase the document height by the width of the wide-div
+document.body.style.height = `${document.body.offsetHeight + wideDiv.offsetWidth - wideDiv.offsetHeight*2}px`;
+
+let threshold = wideDiv.offsetWidth - window.innerWidth;
+let wideDivHeight = wideDiv.offsetHeight;
+window.addEventListener('scroll', function(e) {
+    let position = window.scrollY;
+
+    if (position > wideDivHeight) {
+        let adjustedPosition = position - wideDivHeight;
+
+        if (adjustedPosition <= threshold) {
+            wideDiv.style.transform = `translateX(-${adjustedPosition}px)`;
+            if (stickyParent.style.position !== 'sticky') {
+                stickyParent.style.position = 'sticky';  
+            }
+        } else {
+          wideDiv.style.transform = `translateX(-${threshold}px)`;
+        }
+    }
 });
 
-observer.observe(document.querySelector(".navigation"));
 
-window.addEventListener('scroll', (e) => {
-  const currentScrollTop = window.scrollY;
-  isScrollingDown = currentScrollTop > lastScrollTopProduct;
-  lastScrollTopProduct = currentScrollTop;
-  
-  if (isScrollingHorizontally) {
-    console.log("Moving now")
-    e.preventDefault();  // Prevent natural scrolling
-    const wideDiv = document.querySelector(".navigation");
-    const delta = isScrollingDown ? -10 : 10;
-    accumulatedDelta += delta;
-    
-    // Bounds checking for left and right ends of wide div
-    const maxTranslateX = -500 * window.innerWidth;  // Assuming vw is equivalent to the window width
-    const newTranslateX = Math.min(0, Math.max(maxTranslateX, accumulatedDelta));
-    wideDiv.style.transform = `translateX(${newTranslateX}px)`;
-    
-    // Allow natural scrolling to resume if at the rightmost end
-    if (newTranslateX === maxTranslateX) {
-      isScrollingHorizontally = false;
-    }
-  }
+const imageProduct = document.querySelector(".image");
+const nav = document.querySelector("header");
+function navigateTo(index) {
+  // Assuming each item in .navigation has the same width, and that width is 100vw
+  // Adjust accordingly if this is not the case
+  const itemWidth = stickyParent.offsetWidth;
+
+  // Adjust the scroll position to match the translation
+  const adjustedScrollPosition = (itemWidth * index + nav.offsetHeight + imageProduct.offsetHeight);
+  window.scrollTo(adjustedScrollPosition, adjustedScrollPosition );
+}
+
+// Add the event listeners to all nav_product elements
+const navProducts = document.querySelectorAll('.nav_product');
+navProducts.forEach((navProduct, index) => {
+  navProduct.addEventListener('click', function() {
+      navigateTo(index);
+  });
 });
