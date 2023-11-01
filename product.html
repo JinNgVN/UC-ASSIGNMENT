@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="product.css">
+    <link rel="icon" type="image/x-icon" href="asset/D&S_Logo_1.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="inner">
-            <section id="navigation"> 
-                <nav>
-                    <ul>
-                        <li><a href="product.html">OUR TEAS</a></li>                            
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section id="logo"><a href="index.html">LOGO</a></section>
-            <section id="cart">CART</section>
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <nav class="navbar">
+            <a href="product.html">OUR TEAS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <a href="index.html" class="logo"><img src="asset/Asset 11@4x.png"></a> 
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
         </div>
     </header>
 
     <div class="image">
         <h1>OUR TEAS</h1>
     </div>
+
     <div class="parent_wide_div">
         <div class="nav_container_product">
         <div class="navigation_bar">
@@ -39,214 +39,174 @@
             <div class="nav_product nav6"></div>
         </div>
         <div class="navigation" id="move">
-            <div class="product">
-                <div class="product_image_container">
-                    <div class="product_image product_image_1">
-                    </div>
+            <div class="card card_1">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>RASPBERRY & LEMON</h2>
+                    <p class="product_description">
+                        Our Raspberry & Lemon creates a unique and
+                        complex flavour profile that is both sweet and tangy,
+                        with a subtle hint of tartness that perfectly balances
+                        out the sweetness. It is a perfect choice for anyone
+                        looking for a refreshing and rejuvenating beverage.
+                    </p>
+                    <div class="product_line"></div>
+                    <p class="product_ingredient">
+                        INGREDIENTS:<br>
+                        Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%), Raspberry pieces (0.1%).
+                    </p>
+                    <div class="product_line"></div>
+                    <button role="button" class="product_btn">ADD TO CART</button>
                 </div>
-                <div class="product_detail">
-                    <h1 class="product_title product_title_1">RASPBERRY & LEMON</h1>
-                    <div class="product_info">
-                        <p class="product_description">
-                            Our Raspberry & Lemon creates a unique and<br> 
-                            complex flavour profile that is both sweet and tangy,<br>
-                            with a subtle hint of tartness that perfectly balances<br>
-                            out the sweetness. It is a perfect choice for anyone<br>
-                            looking for a refreshing and rejuvenating beverage.
-                        </p>
-                        <div class="line"></div>
-                        <p class="product_ingredient">
-                            INGREDIENTS:<br>
-                            Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%),<br>
-                            Raspberry pieces (0.1%).
-                        </p>
-                        <div class="line"></div>
-                        <button role="button" class="product_btn">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="product_logo product_logo_1"></div>
+                <img src="asset/box_1.png">
             </div>
-            <div class="product">
-                <div class="product_image_container">
-                    <div class="product_image product_image_2"></div>
+            <div class="card card_2">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>ORANGE & CINNAMON</h2>
+                    <p class="product_description">
+                        Discover the citrusy flavour of orange, with hints of cinnamon 
+                        and the beautiful amber brew from 100% sustainably sourced Rooibos 
+                        from South Africa in this warming blend.
+                    </p>
+                    <div class="product_line"></div>
+                    <p class="product_ingredient">
+                        INGREDIENTS:<br>
+                        Orange peel, Rooibos, Vietnamese cinnamon, Orange flavouring.
+                    </p>
+                    <div class="product_line"></div>
+                    <button role="button" class="product_btn">ADD TO CART</button>
                 </div>
-                <div class="product_detail">
-                    <h1 class="product_title product_title_2">RASPBERRY & LEMON</h1>
-                    <div class="product_info">
-                        <p class="product_description">
-                            Our Raspberry & Lemon creates a unique and<br> 
-                            complex flavour profile that is both sweet and tangy,<br>
-                            with a subtle hint of tartness that perfectly balances<br>
-                            out the sweetness. It is a perfect choice for anyone<br>
-                            looking for a refreshing and rejuvenating beverage.
-                        </p>
-                        <div class="line"></div>
-                        <p class="product_ingredient">
-                            INGREDIENTS:<br>
-                            Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%),<br>
-                            Raspberry pieces (0.1%).
-                        </p>
-                        <div class="line"></div>
-                        <button role="button" class="product_btn">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="product_logo product_logo_2"></div>
+                <img src="asset/box_2.png">
             </div>
-            <div class="product">
-                <div class="product_image_container">
-                    <div class="product_image product_image_3"></div>
+            <div class="card card_3">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>PURE CAMOMILE</h2>
+                    <p class="product_description">
+                        Sink into a deep armchair and enjoy a moment of calm with our gently soothing Pure Camomile Infusion. 
+                        100% sustainably sourced camomile is harvested during the warm summer 
+                        months to create a golden infusion which is naturally slightly sweet and floral.
+                    </p>
+                    <div class="product_line"></div>
+                    <p class="product_ingredient">
+                        INGREDIENTS:<br>
+                        Camomile.
+                    </p>
+                    <div class="product_line"></div>
+                    <button role="button" class="product_btn">ADD TO CART</button>
                 </div>
-                <div class="product_detail">
-                    <h1 class="product_title product_title_3">RASPBERRY & LEMON</h1>
-                    <div class="product_info">
-                        <p class="product_description">
-                            Our Raspberry & Lemon creates a unique and<br> 
-                            complex flavour profile that is both sweet and tangy,<br>
-                            with a subtle hint of tartness that perfectly balances<br>
-                            out the sweetness. It is a perfect choice for anyone<br>
-                            looking for a refreshing and rejuvenating beverage.
-                        </p>
-                        <div class="line"></div>
-                        <p class="product_ingredient">
-                            INGREDIENTS:<br>
-                            Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%),<br>
-                            Raspberry pieces (0.1%).
-                        </p>
-                        <div class="line"></div>
-                        <button role="button" class="product_btn">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="product_logo product_logo_3"></div>
+                <img src="asset/box_3.png">
             </div>
-            <div class="product">
-                <div class="product_image_container">
-                    <div class="product_image product_image_4"></div>
+            <div class="card card_4">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>GREEN TEA & MINT</h2>
+                    <p class="product_description">
+                        Add a fresh minty twist to your day. We think that our Green Tea & Mint are perfectly matched.
+                        The mint softens the taste of green tea so it’s deliciously light 
+                        and refreshing. Perfect any time you want to bring a little moment 
+                        of Zen into your day.
+                    </p>
+                    <div class="product_line"></div>
+                    <p class="product_ingredient">
+                        INGREDIENTS:<br>
+                        Green tea, Mint leaves, Natural flavouring.
+                    </p>
+                    <div class="product_line"></div>
+                    <button role="button" class="product_btn">ADD TO CART</button>
                 </div>
-                <div class="product_detail">
-                    <h1 class="product_title product_title_4">RASPBERRY & LEMON</h1>
-                    <div class="product_info">
-                        <p class="product_description">
-                            Our Raspberry & Lemon creates a unique and<br> 
-                            complex flavour profile that is both sweet and tangy,<br>
-                            with a subtle hint of tartness that perfectly balances<br>
-                            out the sweetness. It is a perfect choice for anyone<br>
-                            looking for a refreshing and rejuvenating beverage.
-                        </p>
-                        <div class="line"></div>
-                        <p class="product_ingredient">
-                            INGREDIENTS:<br>
-                            Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%),<br>
-                            Raspberry pieces (0.1%).
-                        </p>
-                        <div class="line"></div>
-                        <button role="button" class="product_btn">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="product_logo product_logo_4"></div>
+                <img src="asset/box_4.png">
             </div>
-            <div class="product">
-                <div class="product_image_container">
-                    <div class="product_image product_image_5"></div>
+            <div class="card card_5">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>RUSSIAN CARRAVAN</h2>
+                    <p class="product_description">
+                        The distinctively smooth smokiness of summer harvested Chinese 
+                        Keemun teas in this blend is reminiscent of tea camel caravans 
+                        travelling to Russia in the 19th century. During the journey, 
+                        the tea absorbed the aroma of the campfires giving it a subtle 
+                        smokiness, hence inspiring this blend’s name.
+                    </p>
+                    <div class="product_line"></div>
+                    <p class="product_ingredient">
+                        INGREDIENTS:<br>
+                        Black tea.
+                    </p>
+                    <div class="product_line"></div>
+                    <button role="button" class="product_btn">ADD TO CART</button>
                 </div>
-                <div class="product_detail">
-                    <h1 class="product_title product_title_5">RASPBERRY & LEMON</h1>
-                    <div class="product_info">
-                        <p class="product_description">
-                            Our Raspberry & Lemon creates a unique and<br> 
-                            complex flavour profile that is both sweet and tangy,<br>
-                            with a subtle hint of tartness that perfectly balances<br>
-                            out the sweetness. It is a perfect choice for anyone<br>
-                            looking for a refreshing and rejuvenating beverage.
-                        </p>
-                        <div class="line"></div>
-                        <p class="product_ingredient">
-                            INGREDIENTS:<br>
-                            Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%),<br>
-                            Raspberry pieces (0.1%).
-                        </p>
-                        <div class="line"></div>
-                        <button role="button" class="product_btn">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="product_logo product_logo_5"></div>
+                <img src="asset/box_5.png">
             </div>
-            <div class="product">
-                <div class="product_image_container">
-                    <div class="product_image product_image_6"></div>
+            <div class="card card_6">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>PURE EARL GREY</h2>
+                    <p class="product_description">
+                        Light and aromatic, with a citrusy twist, for those who travel off the beaten track. 
+                        First created by Twinings in 1831 for the British Prime Minister the 2nd Earl Grey 
+                        of England, this iconic loose leaf blend perfectly balances citrusy bergamot flavour 
+                        with a gentle black tea base.
+                    </p>
+                    <div class="product_line"></div>
+                    <p class="product_ingredient">
+                        INGREDIENTS:<br>
+                        Black tea.
+                    </p>
+                    <div class="product_line"></div>
+                    <button role="button" class="product_btn">ADD TO CART</button>
                 </div>
-                <div class="product_detail">
-                    <h1 class="product_title product_title_6">RASPBERRY & LEMON</h1>
-                    <div class="product_info">
-                        <p class="product_description">
-                            Our Raspberry & Lemon creates a unique and<br> 
-                            complex flavour profile that is both sweet and tangy,<br>
-                            with a subtle hint of tartness that perfectly balances<br>
-                            out the sweetness. It is a perfect choice for anyone<br>
-                            looking for a refreshing and rejuvenating beverage.
-                        </p>
-                        <div class="line"></div>
-                        <p class="product_ingredient">
-                            INGREDIENTS:<br>
-                            Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%),<br>
-                            Raspberry pieces (0.1%).
-                        </p>
-                        <div class="line"></div>
-                        <button role="button" class="product_btn">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="product_logo product_logo_6"></div>
+                <img src="asset/box_6.png">
             </div>
         </div>
     </div>
     
 
-        <footer>
-            <div class="container">
-                <div class="footer_logo">
-                    <img src="asset/D_S_Logo_1.png">
-                </div>
-                <div class="kit_container">
-                    <div class="kit">
-                        <div class="contact-form">
-                            <h3>KEEP IN TOUCH</h3>
-                            <form class="footer_form">
-                                <input type="email" id="email" placeholder="E-mail" required>
-                                <input type="submit" id="submit">
-                            </form>
-                        </div> 
-                        <div class="links">
-                            <nav>
-                                <ul>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-                                </ul>
-                            </nav>
-                        </div>               
-                        <div class="line_m"></div>
-                    </div>
-                    <div class="menu">
+    <footer>
+        <img class="footer_logo" src="asset/D&S_Logo_1.png">
+        <div class="container">
+            <div class="kit_container">
+                <div class="kit">
+                    <div class="contact-form">
+                        <h3>KEEP IN TOUCH</h3>
+                        <form class="footer_form">
+                            <input type="email" id="email" placeholder="E-mail" required>
+                            <input type="submit" id="submit">
+                        </form>
+                    </div> 
+                    <div class="links">
                         <nav>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="product.html">Our Teas</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="">FAQS</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><i class="fa-brands fa-facebook-f"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><i class="fa-solid fa-envelope"></i></a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div>               
+                    <div class="line_m"></div>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="product.html">Our Teas</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">FAQS</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="line_wrapper">
-                <div class="line"></div>
-                <div class="reserve_container">
-                    <p>All rights reserved ...</p>
-                </div>
+        </div>
+        <div class="line_wrapper">
+            <div class="line"></div>
+            <div class="reserve_container">
+                <p>All Rights Reserved. Designed by Tram Duong</p>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
-    <script src="common.js"></script>
     <script src="product.js"></script> 
 </body>
 </html>

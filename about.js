@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, {
         threshold: 0,  // Trigger even when a tiny portion of the slide becomes visible.
-        rootMargin: "-150px 0px -150px 0px"  // Adjust this value to decide how far outside the viewport the callback should be triggered.
+        rootMargin: "-200px -50px -200px -50px"  // Adjust this value to decide how far outside the viewport the callback should be triggered.
     });
 
     slides.forEach(slide => {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-const accordionHeaders = document.querySelectorAll(".accordion-header");
+const accordionHeaders = document.querySelectorAll(".accordion_header");
 
 accordionHeaders.forEach(header => {
     header.addEventListener("click", function() {
@@ -30,11 +30,11 @@ accordionHeaders.forEach(header => {
 
         accordionItem.classList.toggle("active");
      
-        accordionHeaders.forEach(otherHeader => {
-            if(otherHeader !== header) {
-                otherHeader.parentElement.classList.remove("active");
-            }
-        });
+        // accordionHeaders.forEach(otherHeader => {
+        //     if(otherHeader !== header) {
+        //         otherHeader.parentElement.classList.remove("active");
+        //     }
+        // });
     });
 });
 

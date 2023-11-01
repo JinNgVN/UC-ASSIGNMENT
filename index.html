@@ -4,17 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DIP&SIP</title>
-        <link rel="icon" type="image/x-icon" href="asset/D_S_Logo_1.png">
-        <link rel="stylesheet" href="common.css">
+        <link rel="icon" type="image/x-icon" href="asset/D&S_Logo_1.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     
     <body>
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="hero_image">
             </div>
             <div class="logo">
+               
                 <div class="hero_text_dip">
                     DIP
                 </div>
@@ -24,21 +24,20 @@
                     SIP
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <header>
-            <div class="inner">
-                <section id="navigation"> 
-                    <nav>
-                        <ul>
-                            <li><a href="product.html">OUR TEAS</a></li>                            
-                            <li><a href="about.html">ABOUT US</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
-                        </ul>
-                    </nav>
-                </section>
-                <section id="logo"><a href="index.html">LOGO</a></section>
-                <section id="cart">CART</section>
+            <input type="checkbox" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <nav class="navbar">
+                <a href="product.html">OUR TEAS</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+            <a href="index.html" class="logo"><img src="asset/Asset 11@4x.png"></a> 
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
             </div>
         </header>
 
@@ -50,7 +49,7 @@
                 </div>
                 <div class="shop-text">
                     <h1>GET YOUR DAILY SIP OF TEA</h1>
-                    <button role="button">SHOP NOW</button>
+                    <a href="product.html"><button role="button">SHOP NOW</button></a>
                 </div>
             </section>
 
@@ -58,44 +57,45 @@
                 <div class="scroll_container line_1">
                     <div class="scroll-parent">
                         <div class="scroll-element primary">
-                            <a href=""><img src=""><p id="red">RASPBERRY & LEMON</p></a>
-                            <a href=""><img src=""><p id="purple">PURE EARL GREY</p></a>
+                            <p id="red">RASPBERRY & LEMON</p>
+                            <p id="purple">PURE EARL GREY</p>
                         </div>
                         <div class="scroll-element secondary">
-                            <a href=""><img src=""><p id="red">RASPBERRY & LEMON</p></a>
-                            <a href=""><img src=""><p id="purple">PURE EARL GREY</p></a>
+                            <p id="red">RASPBERRY & LEMON</p>
+                            <p id="purple">PURE EARL GREY</p>
                         </div>
                     </div>
                 </div>
                 <div class="scroll_container line_2">
                     <div class="scroll-parent">
                         <div class="scroll-element primary_right">
-                            <a href=""><img src=""><p id="green">GREEN TEA & MINT</p></a>
-                            <a href=""><img src=""><p id="orange">ORANGE & CINNAMON</p></a>
+                            <p id="green">GREEN TEA & MINT</p>
+                            <p id="orange">ORANGE & CINNAMON</p>
                         </div>
                         <div class="scroll-element secondary_right">
-                            <a href=""><img src=""><p id="green">GREEN TEA & MINT</p></a>
-                            <a href=""><img src=""><p id="orange">ORANGE & CINNAMON</p></a>
+                            <p id="green">GREEN TEA & MINT</p>
+                            <p id="orange">ORANGE & CINNAMON</p>
                         </div>
                     </div>
                 </div>
                 <div class="scroll_container line_3">
                     <div class="scroll-parent">
                         <div class="scroll-element primary">
-                            <a href=""><img src=""><p id="blue">RUSSIAN CARRAVAN</p></a>
-                            <a href=""><img src=""><p id="yellow">PURE CAMOMILE</p></a>
+                            <p id="blue">RUSSIAN CARRAVAN</p>
+                            <p id="yellow">PURE CAMOMILE</p>
                         </div>
                         <div class="scroll-element secondary">
-                            <a href=""><img src=""><p id="blue">RUSSIAN CARRAVAN</p></a>
-                            <a href=""><img src=""><p id="yellow">PURE CAMOMILE</p></a>
+                            <p id="blue">RUSSIAN CARRAVAN</p>
+                            <p id="yellow">PURE CAMOMILE</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="about">
-                <div class="about-image">
-                </div>
+            <section id="about">
+                <video autoplay loop muted class="about-video">
+                    <source src="asset/pexels_videos_1324942 (2160p).mp4" type="video/mp4">
+                </video>
                 <div class="about-text">
                     <h1>WHY D&S?</h1>
                     <p>Here at Dip & Sip we believe that every cup of tea counts. 
@@ -103,7 +103,7 @@
                         stuff to support people and the planet. That’s why all our 
                         products are made with pure, natural ingredients and a clear conscience.
                     </p>
-                    <button id="button_reverse" role="button">ABOUT US</button>
+                    <a href="about.html"><button id="button_reverse" role="button">ABOUT US</button></a>
                 </div>
                 <ul class=about-listing>
                     <li>ORGANIC</li>
@@ -114,10 +114,10 @@
 
             <section class="best_selling">
                 <div class="scroll_container_best_selling">
-                    <div class="best_selling-text">
+                   <div class="best_selling-text">
                         <h1>ENJOY THE REFRESHING TASTE OF NATURE</h1>
-                        <button role="button">SHOP NOW</button>
-                    </div>
+                        <a href="product.html"><button role="button">SHOP NOW</button></a>
+                    </div> 
                 </div>
                 <div class="best_selling-images">
                     <div class="best_selling-image image1">
@@ -131,18 +131,17 @@
                     </div>
                 </div>
             </section>
-
             
             <section class="review">
                 <div class="carousel">
                     <div class="slider">
                         <section>
                             <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                            <p>Very refreshing and rich flavours, would recommend for other tea lovers.</p>
+                            <p>Very refreshing and rich flavours, would definitely recommend for other tea lovers.<br><br>- Angela S.</p>
                         </section>
                         <section>
                             <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                            <p>Very refreshing and rich flavours, would recommend for other tea lovers.</p>
+                            <p>Super amazing tea, they have the flavors and quality you want. Teas are amazing and the shipping is super fast! My go to tea shop!!!!<br><br>- Aaron K.</p>
                         </section>
                         <section>
                             <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -168,10 +167,8 @@
         </main>
 
         <footer>
+            <img class="footer_logo" src="asset/D&S_Logo_1.png">
             <div class="container">
-                <div class="footer_logo">
-                    <img src="asset/D_S_Logo_1.png">
-                </div>
                 <div class="kit_container">
                     <div class="kit">
                         <div class="contact-form">
@@ -184,9 +181,9 @@
                         <div class="links">
                             <nav>
                                 <ul>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><i class="fa-solid fa-envelope"></i></a></li>
                                 </ul>
                             </nav>
                         </div>               
@@ -198,8 +195,8 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="product.html">Our Teas</a></li>
                                 <li><a href="about.html">About Us</a></li>
-                                <li><a href="">FAQS</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="about.html">FAQS</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -208,11 +205,11 @@
             <div class="line_wrapper">
                 <div class="line"></div>
                 <div class="reserve_container">
-                    <p>All rights reserved ...</p>
+                    <p>All Rights Reserved. Designed by Tram Duong</p>
                 </div>
             </div>
         </footer>
-        <script src="common.js"></script>
+
         <script src="script.js"></script> 
     </body>
 </html>

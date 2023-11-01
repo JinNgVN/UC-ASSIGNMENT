@@ -1,0 +1,212 @@
+/* navigation */
+.parent_wide_div{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.nav_container_product {
+    width: 100vw;
+    position: relative;
+}
+
+
+.navigation_bar{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 2vw;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.nav_product{
+    width: 100%;
+    height: 16%;
+    cursor: pointer;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    width: 600vw;
+    height: 100vh;
+    margin-bottom: 3rem;
+    padding: 2rem 0rem;
+    transition: transform 0.5s ease-out;
+}
+
+/* .navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+    width: 300vw;
+}  */
+
+
+.card{
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    /* border-radius: 20px; */
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    overflow: hidden;
+    content: '';
+    clip-path: circle(300px at center);
+    background-image: url(asset/picked-organic-raspberries-macro.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.card:hover .circle{
+    opacity: 0.3;
+    clip-path: circle(800px at center);
+}
+
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover  img{
+    left: 75%;
+    height: 600px;
+}
+
+.card .content{
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding: 20px 20px 20px 100px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2{
+    color: #c82647;
+    text-transform: uppercase;
+    font-family: 'Abril Fatface',cursive;
+    font-size: 5em;
+    margin-bottom: 0.3em;
+    font-weight: 300;
+    /* line-height: 1em; */
+}
+
+.card .content p{
+    font-size: 1.4em;
+}
+
+.card .line{
+    width: 80%;
+    margin: 1em 0;
+    padding: 0;
+}
+
+@media (max-width: 991px)
+{
+    .card:hover{
+        height: auto;
+    }
+    .card .content{
+        width: 50%;
+        padding-left: 50px;
+    }
+    .card .content h2{
+        font-size: 3em;
+    }
+    .card .content p{
+        font-size: 1em;
+    }
+    .card:hover img{
+        top: 70%;
+        height: 400px;
+    }
+    .card .circle{
+        border-radius: 100px;
+    }
+
+    .card button{
+        padding: 10px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 420px)
+{
+    .card{
+        height: auto;
+        max-width: 80vw;
+        align-items: flex-start;
+    }
+    .card:hover{
+        height: 90vh;
+    }
+    .card .content{
+        padding: 20px;
+        width: 100%;
+    }
+    .card .content h2{
+        font-size: 2.5em;
+        text-align:center;
+    }
+    .card .content p{
+        font-size: 1em;
+    }
+    .card:hover img{
+        top: 85%;
+        left: 55%;
+        height: 300px;
+    }
+    .card button{
+        padding: 5px;
+        width: 50%;
+    }
+}
+
+.nav1 {
+    background-color: #BC284A;
+}
+.nav2 {
+    background-color: #F99D44;
+}
+.nav3 {
+    background-color: #FEBE4B;
+}
+.nav4 {
+    background-color: #69A956;
+}
+.nav5 {
+    background-color: #30499F;
+}
+.nav6 {
+    background-color: #645EA9;
+}

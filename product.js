@@ -34,7 +34,7 @@ function navigateTo(index) {
 
   // Adjust the scroll position to match the translation
   const adjustedScrollPosition = (itemWidth * index + nav.offsetHeight + imageProduct.offsetHeight);
-  window.scrollTo(adjustedScrollPosition, adjustedScrollPosition );
+  window.scrollTo(adjustedScrollPosition, adjustedScrollPosition);
 }
 
 // Add the event listeners to all nav_product elements
