@@ -74,9 +74,12 @@
 }
 .listCard li button{
     background-color: rgba(0, 0, 0, 0.3);
-    height: 40px;
-    border-radius: 50px;
-    color: #ffffff;
+    /* height: 40px; 
+    width: 40px;*/
+    border: none;
+    border-radius: 45px;
+    /* color: #ffffff;
+    padding-bottom: 20px; */
 }
 .listCard .count{
     margin: 0 10px;
