@@ -180,7 +180,27 @@
 } */
 
 .nav1 {
+    background-color: rgba(188, 40, 74, 0.5);
+}
+.nav2 {
+    background-color: rgba(249, 157, 68, 0.5);
+}
+.nav3 {
+    background-color: rgba(254, 190, 75, 0.5);
+}
+.nav4 {
+    background-color: rgba(105, 169, 86, 0.5);
+}
+.nav5 {
+    background-color: rgba(48, 73, 159, 0.5);
+}
+.nav6 {
+    background-color: rgba(100, 94, 169, 0.5);
+}
+
+/* .nav1 {
     background-color: #BC284A;
+    filter: opacity(50%);
 }
 .nav2 {
     background-color: #F99D44;
@@ -196,7 +216,7 @@
 }
 .nav6 {
     background-color: #645EA9;
-}
+} */
 
 .card{
     position: relative;
