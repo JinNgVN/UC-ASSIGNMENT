@@ -6,7 +6,10 @@
         <title>DIP&SIP</title>
         <link rel="icon" type="image/x-icon" href="asset/D&S_Logo_1.png">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="cart.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ 
     </head>
     
     <body>
@@ -25,7 +28,21 @@
                 </div>
             </div>
         </section> -->
-
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body card-detail">
+                <h1>Cart</h1>
+                <ul class="listCard">
+                </ul>
+                <div class="checkOut">
+                    <div class="total">0</div>
+                    <div class="payment">Payment</div>
+                </div>
+            </div>
+        </div>
         <header>
             <input type="checkbox" id="toggler">
             <label for="toggler" class="fas fa-bars"></label>
@@ -37,11 +54,16 @@
             <a href="index.html" class="logo"><img src="asset/Asset 11@4x.png"></a> 
             <div class="icons">
                 <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-shopping-cart"></a>
+                <button class="btn btn-primary cart_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="fas fa-shopping-cart"></span>
+                </button>
+
             </div>
+           
         </header>
 
         <main>
+            
             <section class="shop">
                 <div class="shop-image">
                     <img src="asset/dns_stackall.png"> 
@@ -167,7 +189,7 @@
         </main>
 
         <footer>
-            <img class="footer_logo" src="asset/D&S_Logo_1.png">
+            <img class="footer_logo" src="asset/D_S_Logo_1.png">
             <div class="container">
                 <div class="kit_container">
                     <div class="kit">
@@ -195,7 +217,7 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="product.html">Our Teas</a></li>
                                 <li><a href="about.html">About Us</a></li>
-                                <li><a href="about.html">FAQS</a></li>
+                                <li><a href="about.html#faqs">FAQS</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -211,5 +233,8 @@
         </footer>
 
         <script src="script.js"></script> 
+        <script src="cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
     </body>
 </html>

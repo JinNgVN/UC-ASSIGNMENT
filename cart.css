@@ -1,0 +1,83 @@
+.offcanvas.offcanvas-end {
+    width: 500px;/* Hoặc bạn có thể đặt một giá trị cố định như 400px */
+    background-color: #453e3bf4;
+}
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-detail h1{
+    color: #ffffff;
+}
+.listCard {
+    flex-grow: 1;
+    overflow-y: auto; /* Thêm thanh cuộn nếu nội dung trong listCard vượt quá chiều cao */
+    margin-bottom: 10px; /* Khoảng cách giữa listCard và checkOut */
+}
+
+.checkOut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng để phân tách checkOut và nội dung bên trên */
+}
+
+.checkOut .total {
+    background-color: #008000; /* Màu xanh */
+    color: #ffffff; /* Màu trắng */
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px; /* Bo góc */
+}
+
+.checkOut .payment {
+    background-color: #000000; /* Màu đen */
+    color: #ffffff; /* Màu trắng */
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer; /* Thêm hiệu ứng con trỏ khi di chuột */
+    border-radius: 5px; /* Bo góc */
+    transition: background-color 0.3s, color 0.3s; /* Thêm transition để làm mượt hiệu ứng */
+}
+
+.checkOut .payment:hover {
+    background-color: #ffffff; /* Màu trắng khi hover */
+    color: #000000; /* Màu đen khi hover */
+}
+
+.listCard{
+    margin: 0;
+    padding: 0;
+}
+
+.listCard li{
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: black;
+    row-gap: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.listCard li img{
+    width: 100%;
+    border-radius: 50%;
+}
+.listCard li button{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 40px;
+    border-radius: 50px;
+    color: #ffffff;
+}
+.listCard .count{
+    margin: 0 10px;
+}

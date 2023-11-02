@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="asset/D&S_Logo_1.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
     <title>Document</title>
 </head>
 <body>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+          <button type="button" class="btn-close btn-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body card-detail">
+            <h1>Cart</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="payment">Payment</div>
+            </div>
+        </div>
+    </div>
     <header>
         <input type="checkbox" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
@@ -20,7 +38,9 @@
         <a href="index.html" class="logo"><img src="asset/Asset 11@4x.png"></a> 
         <div class="icons">
             <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
+            <button class="cartButton cart_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="fas fa-shopping-cart"></span>
+            </button>
         </div>
     </header>
 
@@ -38,8 +58,8 @@
             <div class="nav_product nav5"></div>
             <div class="nav_product nav6"></div>
         </div>
-        <div class="navigation" id="move">
-            <div class="card card_1">
+        <div class="navigation" id="move"id="card-container">
+            <div class="card-cover card_1">
                 <div class="circle"></div>
                 <div class="content">
                     <h2>RASPBERRY & LEMON</h2>
@@ -56,11 +76,11 @@
                         Hibiscus, Apple, Orange peels, Raspberry and lemon flavouring (7%), Raspberry pieces (0.1%).
                     </p>
                     <div class="product_line"></div>
-                    <button role="button" class="product_btn">ADD TO CART</button>
+                    <button role="button" class="product_btn" onclick="addToCart('RASPBERRY & LEMON', 100, 'asset/picked-organic-raspberries-macro.jpg')">ADD TO CART</button>
                 </div>
                 <img src="asset/box_1.png">
             </div>
-            <div class="card card_2">
+            <div class="card-cover card_2">
                 <div class="circle"></div>
                 <div class="content">
                     <h2>ORANGE & CINNAMON</h2>
@@ -75,11 +95,11 @@
                         Orange peel, Rooibos, Vietnamese cinnamon, Orange flavouring.
                     </p>
                     <div class="product_line"></div>
-                    <button role="button" class="product_btn">ADD TO CART</button>
+                    <button role="button" class="product_btn" onclick="addToCart('ORANGE & CINNAMON', 150, 'asset/organic-vegetarian-pile-group-oranges.jpg')">ADD TO CART</button>
                 </div>
                 <img src="asset/box_2.png">
             </div>
-            <div class="card card_3">
+            <div class="card-cover card_3">
                 <div class="circle"></div>
                 <div class="content">
                     <h2>PURE CAMOMILE</h2>
@@ -94,11 +114,12 @@
                         Camomile.
                     </p>
                     <div class="product_line"></div>
-                    <button role="button" class="product_btn">ADD TO CART</button>
+                    <button role="button" class="product_btn" onclick="addToCart('PURE CAMOMILE', 200, 'asset/white-cosmos-flowers.jpg')">ADD TO CART</button>
+
                 </div>
                 <img src="asset/box_3.png">
             </div>
-            <div class="card card_4">
+            <div class="card-cover card_4">
                 <div class="circle"></div>
                 <div class="content">
                     <h2>GREEN TEA & MINT</h2>
@@ -114,11 +135,11 @@
                         Green tea, Mint leaves, Natural flavouring.
                     </p>
                     <div class="product_line"></div>
-                    <button role="button" class="product_btn">ADD TO CART</button>
+                    <button role="button" class="product_btn" onclick="addToCart('GREEN TEA & MINT', 250, 'asset/close-up-green-leaves-nature.jpg')">ADD TO CART</button>
                 </div>
                 <img src="asset/box_4.png">
             </div>
-            <div class="card card_5">
+            <div class="card-cover card_5">
                 <div class="circle"></div>
                 <div class="content">
                     <h2>RUSSIAN CARRAVAN</h2>
@@ -135,11 +156,11 @@
                         Black tea.
                     </p>
                     <div class="product_line"></div>
-                    <button role="button" class="product_btn">ADD TO CART</button>
+                    <button role="button" class="product_btn" onclick="addToCart('RUSSIAN CARRAVAN', 300, 'asset/blacktea.jpg')">ADD TO CART</button>
                 </div>
                 <img src="asset/box_5.png">
             </div>
-            <div class="card card_6">
+            <div class="card-cover card_6">
                 <div class="circle"></div>
                 <div class="content">
                     <h2>PURE EARL GREY</h2>
@@ -155,7 +176,7 @@
                         Black tea.
                     </p>
                     <div class="product_line"></div>
-                    <button role="button" class="product_btn">ADD TO CART</button>
+                    <button role="button" class="product_btn" onclick="addToCart('PURE EARL GREY', 350, 'asset/close-up-view-natural-seeds-concept.jpg')">ADD TO CART</button>
                 </div>
                 <img src="asset/box_6.png">
             </div>
@@ -164,7 +185,7 @@
     
 
     <footer>
-        <img class="footer_logo" src="asset/D&S_Logo_1.png">
+        <img class="footer_logo" src="asset/D_S_Logo_1.png">
         <div class="container">
             <div class="kit_container">
                 <div class="kit">
@@ -192,7 +213,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="product.html">Our Teas</a></li>
                             <li><a href="about.html">About Us</a></li>
-                            <li><a href="about.html">FAQS</a></li>
+                            <li><a href="about.html#faqs">FAQS</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
@@ -208,5 +229,8 @@
     </footer>
     </div>
     <script src="product.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+
 </body>
 </html>

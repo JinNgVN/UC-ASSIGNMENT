@@ -62,6 +62,12 @@ button:hover {
 
 
 /* HEADER */
+
+.cartButton{
+    background-color: #000;
+    color: white;
+}
+
 header{
     position: sticky;
     top: 0;
@@ -72,7 +78,7 @@ header{
     justify-content: space-between;
     z-index: 1000;
     text-decoration: none;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     margin: auto;
     align-content: center;
@@ -86,6 +92,8 @@ header .logo{
     display: flex;
 	justify-content: center;
     z-index: 1111;
+    margin-right: auto; 
+    margin-left: auto;
 }
 
 header .logo img{
@@ -96,6 +104,7 @@ header .logo img{
 header .navbar{
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
 }
 
 header .navbar a{
@@ -111,16 +120,28 @@ header .navbar a:hover{
     transition: 1s;
 }
 
-header .icons{
+header .icons {
+    justify-content: flex-end;
     display: flex;
     flex-wrap: nowrap;
-    justify-content:flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    padding: 10px 0;
 }
-header .icons a{
+
+header .icons a,
+header .icons button {
     font-size: 1.5rem;
     color: #FFF;
     margin-left: 1.5rem;
     text-decoration: none;
+    border: none;
+    background: none;
+}
+
+header .icons button {
+    padding: 0;
 }
 
 header #toggler{
@@ -161,6 +182,7 @@ header .fa-bars{
         position: absolute;
         top:100%; left:0; right:0;
         display: none;
+        justify-content: flex-start;
     }
 
     header .navbar a{
@@ -1210,7 +1232,10 @@ footer{
 .nav6.select {background-color: #645EA9;}
 
 /* product cards */
-.card{
+
+
+
+.card-cover{
     position: relative;
     margin: 10vh 10vw 0;
     width: 80vw;
@@ -1220,7 +1245,7 @@ footer{
     transition: 0.5s;
 }
 
-.card .circle{
+.card-cover .circle{
     position: absolute;
     top: 0;
     left: 0;
@@ -1241,12 +1266,12 @@ footer{
 .card_5 .circle{background-image: url(https://www.mcivers.melbourne/cdn/shop/products/Russian-Caravan20170125_0122.jpg?v=1595483952);}
 .card_6 .circle{background-image: url(asset/close-up-view-natural-seeds-concept.jpg);}
 
-.card:hover .circle{
+.card-cover:hover .circle{
     opacity: 0.3;
     clip-path: circle(800px at center);
 }
 
-.card img{
+.card-cover img{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1256,12 +1281,12 @@ footer{
     transition: 0.5s;
 }
 
-.card:hover  img{
+.card-cover:hover  img{
     left: 80%;
     height: 600px;
 }
 
-.card .content{
+.card-cover .content{
     position: relative;
     width: 60%;
     left: 20%;
@@ -1271,13 +1296,13 @@ footer{
     visibility: hidden;
 }
 
-.card:hover .content{
+.card-cover:hover .content{
     left: 0;
     opacity: 1;
     visibility: visible;
 }
 
-.card .content h2{
+.card-cover .content h2{
     text-transform: uppercase;
     font-family: 'Abril Fatface',cursive;
     font-size: 5em;
@@ -1293,11 +1318,11 @@ footer{
 .card_5 .content h2{color: #30499F;}
 .card_6 .content h2{color: #645EA9;}
 
-.card .content p{
+.card-cover .content p{
     font-size: 1.2em;
 }
 
-.card .product_line{
+.card-cover .product_line{
     width: 80%;
     margin: 1em 0;
     padding: 0;
@@ -1306,7 +1331,7 @@ footer{
     border-top: 1px solid;
 }
 
-.card button{
+.card-cover button{
     padding: 15px;
 }
 
@@ -1315,27 +1340,27 @@ footer{
     .image h1{
         font-size: 5em;
     }
-    .card:hover{
+    .card-cover:hover{
         height: auto;
     }
-    .card .content{
+    .card-cover .content{
         width: 50%;
         padding-left: 40px;
     }
-    .card .content h2{
+    .card-cover .content h2{
         font-size: 3em;
     }
-    .card .content p{
+    .card-cover .content p{
         font-size: 1em;
     }
-    .card:hover img{
+    .card-cover:hover img{
         top: 70%;
         height: 400px;
     }
-    .card .circle{
+    .card-cover .circle{
         border-radius: 100px;
     }
-    .card button{
+    .card-cover button{
         padding: 10px;
         width: 60%;
     }
@@ -1346,31 +1371,31 @@ footer{
     .image h1{
         font-size: 5em;
     }
-    .card{
+    .card-cover{
         height: auto;
         max-width: 80vw;
         align-items: flex-start;
     }
-    .card:hover{
+    .card-cover:hover{
         height: 90vh;
     }
-    .card .content{
+    .card-cover .content{
         padding: 20px;
         width: 100%;
     }
-    .card .content h2{
+    .card-cover .content h2{
         font-size: 2.5em;
         text-align:center;
     }
-    .card .content p{
+    .card-cover .content p{
         font-size: 1em;
     }
-    .card:hover img{
+    .card-cover:hover img{
         top: 85%;
         left: 55%;
         height: 300px;
     }
-    .card button{
+    .card-cover button{
         padding: 5px;
         width: 50%;
     }

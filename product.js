@@ -75,3 +75,4 @@ const hightlightNav = (adjustedPosition) => {
     toggleClassNav(navProducts[5]);
   }
 }
+
