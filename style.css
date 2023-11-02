@@ -109,7 +109,7 @@
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(255, 85, 85, 0.8), rgb(255, 255, 255) 70%);
+    background: radial-gradient(circle at center, #F8A8C5, #FFFFFF87 73%, #FFFFFF00 90%);
 }
 
 
