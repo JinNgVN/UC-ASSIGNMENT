@@ -1,17 +1,13 @@
-body {
-    /* overflow-x: hidden; */
-}
 /* image */
-.image {
+.image img{
     background-size: cover;
-    width: 100%;
-    height: 793px;
-    background-image: url("./asset/Flat\ lay\ cup\ with\ lemon\ tea.png");
-    background-repeat: no-repeat;
+    width: 100vw;
+    height: 95vh;
     position: relative;
-    padding: 0px;
-    background-position: center center;
-    margin: 0;
+    /* padding: 0px; */
+    /* background-position: center center; */
+    /* margin: auto; */
+    filter: blur(2px);
 }
 
 .image h1 {
@@ -19,8 +15,10 @@ body {
     font-size: 128px;
     font-weight: 900;
     position: absolute;
-    bottom: 10%;
-    left: 25%;
+    bottom: 48%;
+    left: 35%;
+    margin: auto;
+    display: flex;
 }
 
 /* navigation */
@@ -39,8 +37,10 @@ body {
     height: 100vh;
     margin-bottom: 3rem;
     padding: 2rem 0rem;
-    transition: transform 0.5s ease-out
+    transition: transform 0.5s ease-out;
+    align-items: center;
 }
+
 .nav_container_product {
     width: 100vw;
     position: relative;
@@ -60,19 +60,19 @@ body {
 
 .nav_product{
     width: 100%;
-    height: 16%;
+    height: 15%;
     cursor: pointer;
 }
 
-.product {
+/* .product {
     display: flex;
     flex-direction: row;
     width: 100vw;
     padding: 0rem 1rem;
     position: relative;
-}
+} */
 
-.product_image_container{
+/* .product_image_container{
     height: 100%;
     width: 40%;
     display: flex;
@@ -177,7 +177,8 @@ body {
 }
 .product_title_6 {
     color: #645EA9;
-}
+} */
+
 .nav1 {
     background-color: #BC284A;
 }
@@ -197,41 +198,195 @@ body {
     background-color: #645EA9;
 }
 
-.product_logo_1 {
-    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
-}
-.product_logo_2 {
-    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 4.png");
-}
-.product_logo_3 {
-    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
-}
-.product_logo_4 {
-    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
-}
-.product_logo_5 {
-    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
-}
-.product_logo_6 {
-    background-image: url("asset/Render_Mockup_3840_2160_2023-09-13\ 3.png");
+.card{
+    position: relative;
+    margin: 0 10vw;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
 }
 
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    overflow: hidden;
+    content: '';
+    clip-path: circle(300px at center);
+    background-size: cover;
+    transition: 0.5s;
+}
 
+.card_1 .circle{
+    background-image: url(asset/picked-organic-raspberries-macro.jpg);
+}
 
+.card_2 .circle{
+    background-image: url(asset/organic-vegetarian-pile-group-oranges.jpg);
+}
 
+.card_3 .circle{
+    background-image: url(asset/white-cosmos-flowers.jpg);
+}
 
+.card_4 .circle{
+    background-image: url(asset/close-up-green-leaves-nature.jpg);
+}
 
+.card_5 .circle{
+    background-image: url(asset/blacktea.jpg);
+}
 
+.card_6 .circle{
+    background-image: url(asset/close-up-view-natural-seeds-concept.jpg);
+}
 
+.card:hover .circle{
+    opacity: 0.3;
+    clip-path: circle(800px at center);
+}
 
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    pointer-events: none;
+    transition: 0.5s;
+}
 
+.card:hover  img{
+    left: 80%;
+    height: 600px;
+}
 
+.card .content{
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding: 20px 20px 20px 100px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
 
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
 
+.card .content h2{
+    text-transform: uppercase;
+    font-family: 'Abril Fatface',cursive;
+    font-size: 5em;
+    margin-bottom: 0.3em;
+    font-weight: 300;
+}
 
+.card_1 .content h2{
+    color: #BC284A;
+}
 
+.card_2 .content h2{
+    color: #F99D44;
+}
 
+.card_3 .content h2{
+    color: #FEBE4B;
+}
 
+.card_4 .content h2{
+    color: #69A956;
+}
 
+.card_5 .content h2{
+    color: #30499F;
+}
 
+.card_6 .content h2{
+    color: #645EA9;
+}
 
+.card .content p{
+    font-size: 1.4em;
+}
+
+.card .line{
+    width: 80%;
+    margin: 1em 0;
+    padding: 0;
+}
+
+@media (max-width: 991px)
+{
+    .image h1{
+        font-size: 5em;
+    }
+    .card:hover{
+        height: auto;
+    }
+    .card .content{
+        width: 50%;
+        padding-left: 40px;
+    }
+    .card .content h2{
+        font-size: 3em;
+    }
+    .card .content p{
+        font-size: 1em;
+    }
+    .card:hover img{
+        top: 70%;
+        height: 400px;
+    }
+    .card .circle{
+        border-radius: 100px;
+    }
+
+    .card button{
+        padding: 10px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 420px)
+{
+    .image h1{
+        font-size: 5em;
+    }
+    .card{
+        height: auto;
+        max-width: 80vw;
+        align-items: flex-start;
+    }
+    .card:hover{
+        height: 90vh;
+    }
+    .card .content{
+        padding: 20px;
+        width: 100%;
+    }
+    .card .content h2{
+        font-size: 2.5em;
+        text-align:center;
+    }
+    .card .content p{
+        font-size: 1em;
+    }
+    .card:hover img{
+        top: 85%;
+        left: 55%;
+        height: 300px;
+    }
+    .card button{
+        padding: 5px;
+        width: 50%;
+    }
+}
