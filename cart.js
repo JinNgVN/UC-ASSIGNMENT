@@ -43,20 +43,26 @@ function updateCartUI() {
 
     let listItem = document.createElement("li");
     listItem.innerHTML = `
-        <div><img src="${
-          item.imageUrl
-        }" style="width: 75px; height: 75px;"/></div>
-        <div>${item.productName}</div>
-        <div>${item.price.toLocaleString()}$</div>
-        <div>
-            <button onclick="changeQuantity('${item.productName}', ${
-      item.quantity - 1
-    })">-</button>
-            <div class="count">${item.quantity}</div>
-            <button onclick="changeQuantity('${item.productName}', ${
-      item.quantity + 1
-    })">+</button>
-        </div>`;
+    <div class="cart_container">
+    <div class="line cart_line"></div>
+    <div class="cart_detail">
+        <img class="cart_image_product" src="${
+            item.imageUrl
+          }"/>
+        <div class="cart_info">
+          <div class="cart_name">${item.productName}</div>
+          <div>${item.price.toLocaleString()}$</div>
+        </div>
+        <div class="count">${item.quantity}</div>
+        <button class="btn_cart cart_discard" onclick="changeQuantity('${item.productName}', ${
+          item.quantity - 1
+        })"> - </button>
+        <button class="btn_cart" onclick="changeQuantity('${item.productName}', ${
+        item.quantity + 1
+        })"> + </button>
+    </div>
+</div>
+    `;
     listCard.appendChild(listItem);
   });
 
