@@ -41,7 +41,6 @@ function navigateTo(index) {
 
   // Adjust the scroll position to match the translation
   const adjustedScrollPosition = (itemWidth * index + nav.offsetHeight + imageProduct.offsetHeight + margin_top_and_bottom);
-  console.log("navigate to: ", adjustedScrollPosition);
   window.scrollTo(adjustedScrollPosition, adjustedScrollPosition);
 }
 
@@ -67,28 +66,17 @@ const hightlightNav = (adjustedPosition) => {
   const adjustedScrollPosition = ( nav.offsetHeight + imageProduct.offsetHeight + margin_top_and_bottom);
   
   if (adjustedPosition >= adjustedScrollPosition && adjustedPosition < adjustedScrollPosition + itemWidth) {
-    console.log(adjustedPosition);
     toggleClassNav(navProducts[0]);
   } else if (adjustedPosition >= adjustedScrollPosition + itemWidth && adjustedPosition < adjustedScrollPosition + itemWidth *2) {
     toggleClassNav(navProducts[1]);
-    console.log(adjustedPosition);
-
   } else if (adjustedPosition >= adjustedScrollPosition + itemWidth *2 && adjustedPosition < adjustedScrollPosition + itemWidth*3) {
     toggleClassNav(navProducts[2]);
-    console.log(adjustedPosition);
-
   } else if (adjustedPosition >= adjustedScrollPosition + itemWidth *3 && adjustedPosition < adjustedScrollPosition + itemWidth *4) {
     toggleClassNav(navProducts[3]);
-    console.log(adjustedPosition);
-
   } else if (adjustedPosition >= adjustedScrollPosition + itemWidth *4 && adjustedPosition < adjustedScrollPosition + itemWidth * 5) {
     toggleClassNav(navProducts[4]);
-    console.log(adjustedPosition);
-
   } else {
     toggleClassNav(navProducts[5]);
-    console.log(adjustedPosition);
-
   }
 }
 
